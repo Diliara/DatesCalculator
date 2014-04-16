@@ -16,11 +16,11 @@ if (matchMedia) {
 function WidthChange(mq) {
 
     if (mq.matches) {
-        console.log("here");
+        //console.log("here");
         displayCalendar(1);
     }
     else {
-        console.log("there");
+        //console.log("there");
         displayCalendar(4);
 
     }
@@ -36,7 +36,7 @@ function displayCalendar(numberOfMonths) {
   var numberOfMonths = Number(document.getElementById("numberOfMonths").value);
     console.log("numberOfMonths: " + numberOfMonths);*/
 
-    var dates = ['09/09/2013', '12/06/2013'];
+    //var dates = ['09/09/2013', '12/06/2013'];
 
     function highlightDays(date) {
         var a = new Date(2013, 8, 9); // September 9, 2013
@@ -74,6 +74,12 @@ function displayCalendar(numberOfMonths) {
 
             var newDate = date.getDate();
             var newMonth = date.getMonth();
+
+            /*
+            console.log("date: " + date);
+            console.log("newDate: " + newDate);
+            console.log("newMonth: " + newMonth);
+            */
 
             var weekNumber;
             var weekDays = 4;

@@ -76,10 +76,12 @@ function displayCalendar(numberOfMonths) {
             var newDate = date.getDate();
             var newMonth = date.getMonth();
 
+            /*
             console.log("-----------------------");
             console.log("next semester full date: " + date);
             console.log("next semester Date: " + newDate);
             console.log("next semester Month: " + newMonth);
+            */
 
             //List starting week days of the new semester
             var weekNumber;
@@ -198,10 +200,12 @@ function displayCalendar(numberOfMonths) {
                 weekNumber = 'N/A';
             }
 
+            /*
             console.log("     ~~~~~~~> newDate: " + newDate);
             console.log("     ~~~~~~~> wk12_start: " + wk12_start);
             console.log("     ~~~~~~~> wk12_end: " + wk12_end);
             console.log("     ~~~~~~~> newMonth: " + newMonth);
+            */
 
 
 
