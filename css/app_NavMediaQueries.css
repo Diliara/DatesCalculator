@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/* debugging 
+.row {
+	border:1px solid #F00;	
+}
+
+.columns {
+	border:2px solid #093;
+}
+
+td {
+	border:1px solid #F00;	
+} */
+
+
+
+
+/* -------------------- BREAKING POINT!!! -------------------- */
+
+/* medium */
+
+@media only screen and (min-width: 641px ) {
+
+
+    body {
+     /*   background-color: #8796cc; /* pink -50px +5em [iPad size in and outside of Inst. Canvas 768px]*/
+    }
+    #datepicker_table {
+        margin-top: 2em;
+    }
+
+
+
+}
+
+
+@media only screen and (max-width: 640px ) {
+    body {
+       /* background-color: #4bcc61; /* pink -50px +5em [iPad size in and outside of Inst. Canvas 768px]*/
+    }
+
+
+
+
+}

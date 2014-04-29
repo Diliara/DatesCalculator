@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/app_NavMediaQueries.css">
 
     <link href="css/jquery-ui-1.10.1.css" rel="stylesheet">
 
@@ -31,49 +32,88 @@
 </head>
 <body>
 
-
 <div class="row">
     <div class="large-12 columns">
+        <h1>GDBA Migration Date Picker</h1>
+    </div>
+</div>
 
-        <div class="verticalSpace"></div>
-        <h1>GDBA Spring 2014 to Summer 2014<br> Migration Date Picker</h1>
-        <div id="datepicker" class="ll-skin-latoja"></div>
-        <div class="verticalSpace"></div>
+
+<div class="row">
+    <div class="large-6 medium-6 columns">
+
+        <h2 class="subheader">Migrating from:</h2>
+        <select name="fromSemester" id="fromSemester"> <!--  onchange="doSomething(this.value);" -->
+            <option value="fall_2013">Fall 2013 - 9 Sep</option>
+            <option value="spring_2014">Spring 2014 - 13 Jan</option>
+        </select>
+    </div>
+
+    <div class="large-6 medium-6 columns">
+        <h2 class="subheader">Migrating to:</h2>
+
+        <select name="toSemester" id="toSemester">
+            <option value="fall_2013">Fall 2013 - 9 Sep</option>
+            <option value="spring_2014">Spring 2014 - 13 Jan</option>
+            <option value="summer_2014">Summer 2014 - 5 May</option>
+        </select>
+
 
     </div>
 </div>
 
 <div class="row">
     <div class="large-12 columns">
+        <button class="radius small" id="calGenerator">Generate</button>
+    </div>
+</div>
 
-        <table>
+
+<div class="row">
+    <div class="large-6 medium-6 columns">
+        <div class="verticalSpace"></div>
+        <div id="datepicker_Spring2014_Summer2014" class="ll-skin-latoja"></div>
+        <div id="datepicker_Fall2013_Spring2014" class="ll-skin-latoja"></div>
+        <div class="verticalSpace"></div>
+
+    </div>
+
+    <div class="large-6 medium-6 columns">
+        <table id="datepicker_table">
             <thead>
             <tr>
                 <th class="table-column-18">Wk #</th>
-                <th class="table-column-35" id="from_semester">Spring 2014</th>
-                <th id="to_semester">Summer 2014</th>
+                <th class="table-column-35" id="from_semester"></th>
+                <th id="to_semester"></th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <td><span id="weekNumber">&dash;</span></td>
+
+                <!-- Spring 2014 - 13 Jan, Mon 2014 -->
                 <td><span id="dateoutput1">&dash;</span></td>
-                <!-- 13 Jan, Mon 2014 -->
+
+                <!-- Summer 2014 - 5 May, Mon  2014 -->
                 <td><span id="dateoutput2">&dash;</span></td>
-                <!-- 12 May, Mon  2014 -->
+
             </tr>
             </tbody>
-
         </table>
 
-
     </div>
-   <!-- <div class="large-8 columns hidden"><span id="numberOfMonths">1</span></div>-->
 </div>
 
+<!--
+<div class="row">
+    <div class="large-12 columns">
+      <p id="notice" class="panel">No calendar available</p>
+    </div>
+</div>
+-->
 
-<!--<script src="js/vendor/jquery.js"></script>-->
 <script src="js/app1.js"></script>
+<script src="js/parametric.js"></script>
 <script src="js/foundation.min.js"></script>
 
 

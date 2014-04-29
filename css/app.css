@@ -1,3 +1,13 @@
+/*
+#datepicker_Spring_2014_Summer_2014 {
+    visibility: hidden;
+}
+*/
+
+
+#datepicker_table {
+    visibility: hidden;
+}
 .row {
     max-width: 100%;
 }
@@ -56,3 +66,11 @@ h1, h2 {
 
 
 .hidden {display:none;}
+
+.hiddenv {visibility: hidden;}
+
+.autoFilled {
+    font-size: 14px;
+    text-decoration: underline;
+    font: Arial, Helvetica, sans-serif;
+}
