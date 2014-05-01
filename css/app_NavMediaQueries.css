@@ -2,7 +2,7 @@
 /* CSS Document */
 
 
-/* debugging 
+/* debugging
 .row {
 	border:1px solid #F00;	
 }
@@ -29,9 +29,22 @@ td {
      /*   background-color: #8796cc; /* pink -50px +5em [iPad size in and outside of Inst. Canvas 768px]*/
     }
     #datepicker_table {
-        margin-top: 2em;
+        position:fixed;
+        top:200px;
+        margin-left: 1em;
     }
 
+    #datepicker_Spring2014_Summer2014, #datepicker_Fall2013_Spring2014, #datepicker_Fall2013_Int2_Summer2014_Int2 {
+        position:fixed;
+        top:200px;
+    }
+
+    #toSelect {
+        margin-left: 1em;
+    }
+    #fromSelect {
+        padding-right: 1em;
+    }
 
 
 }
@@ -42,6 +55,15 @@ td {
        /* background-color: #4bcc61; /* pink -50px +5em [iPad size in and outside of Inst. Canvas 768px]*/
     }
 
+    #datepicker_Spring2014_Summer2014, #datepicker_Fall2013_Spring2014, #datepicker_Fall2013_Int2_Summer2014_Int2 {
+        position:fixed;
+        top:290px;
+    }
+
+    #datepicker_table {
+        position:fixed;
+        top:550px;
+    }
 
 
 

@@ -36,28 +36,35 @@
 
 
 <div class="row">
-    <div class="large-6 medium-6 columns">
-
-        <h2 class="subheader">Migrating from:</h2>
-        <select name="fromSemester" id="fromSemester"> <!--  onchange="doSomething(this.value);" -->
-            <option value="fall_2013">Fall 2013 - 9 Sep</option>
-            <option value="fall_2013_int2">Fall 2013 Int 2 - 28 Oct</option>
-            <option value="spring_2014">Spring 2014 - 13 Jan</option>
-        </select>
+    <div class="large-5 medium-5 columns">
+        <div id="fromSelect">
+            <h2 class="subheader">Migrating from:</h2>
+            <select name="fromSemester" id="fromSemester"> <!--  onchange="doSomething(this.value);" -->
+                <option value="fall_2013">Fall 2013 - 9 Sep</option>
+                <option value="fall_2013_int2">Fall 2013 Int 2 - 28 Oct</option>
+                <option value="spring_2014">Spring 2014 - 13 Jan</option>
+            </select>
+        </div>
     </div>
 
-    <div class="large-6 medium-6 columns">
-        <h2 class="subheader">Migrating to:</h2>
+    <div class="large-5 medium-5 columns">
 
-        <select name="toSemester" id="toSemester">
-            <option value="fall_2013">Fall 2013 - 9 Sep</option>
-            <option value="spring_2014">Spring 2014 - 13 Jan</option>
-            <option value="summer_2014">Summer 2014 - 5 May</option>
-            <option value="summer_2014_int2">Summer 2014 Int 2 - June 23</option>
-        </select>
+        <div id="toSelect">
+            <h2 class="subheader">Migrating to:</h2>
+
+            <select name="toSemester" id="toSemester">
+                <option value="fall_2013">Fall 2013 - 9 Sep</option>
+                <option value="spring_2014">Spring 2014 - 13 Jan</option>
+                <option value="summer_2014">Summer 2014 - 5 May</option>
+                <option value="summer_2014_int2">Summer 2014 Int 2 - June 23</option>
+            </select>
+
+        </div>
 
 
     </div>
+
+    <div class="large-2 medium-2 columns"></div>
 </div>
 
 <div class="row">
@@ -68,8 +75,9 @@
 
 
 <div class="row">
-    <div class="large-6 medium-6 columns">
+    <div class="large-5 medium-5 columns">
         <div class="verticalSpace"></div>
+
         <div id="datepicker_Spring2014_Summer2014" class="ll-skin-latoja"></div>
         <div id="datepicker_Fall2013_Spring2014" class="ll-skin-latoja"></div>
         <div id="datepicker_Fall2013_Int2_Summer2014_Int2" class="ll-skin-latoja"></div>
@@ -78,7 +86,7 @@
 
     </div>
 
-    <div class="large-6 medium-6 columns">
+    <div class="large-7 medium-7 columns">
         <table id="datepicker_table">
             <thead>
             <tr>
