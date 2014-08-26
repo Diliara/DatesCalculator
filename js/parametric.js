@@ -14,6 +14,7 @@ function calGenerator() {
     var datepicker_Fall2013_Spring2014 = document.querySelector('#datepicker_Fall2013_Spring2014');
     var datepicker_Spring2014_Summer2014 = document.querySelector('#datepicker_Spring2014_Summer2014');
     var datepicker_Fall2013_Int2_Summer2014_Int2 = document.querySelector('#datepicker_Fall2013_Int2_Summer2014_Int2');
+    var datepicker_Fall2013_Fall2014 = document.querySelector('#datepicker_Fall2013_Fall2014');
 
     var datepicker_table = document.querySelector('#datepicker_table');
 
@@ -30,6 +31,7 @@ function calGenerator() {
         datepicker_Spring2014_Summer2014.style.visibility = 'visible';
         datepicker_Fall2013_Spring2014.style.visibility = 'hidden';
         datepicker_Fall2013_Int2_Summer2014_Int2.style.visibility = 'hidden';
+        datepicker_Fall2013_Spring2014.style.visibility = 'hidden';
 
         displayCalendar_Spring2014_Summer2014(1);
 
@@ -41,6 +43,7 @@ function calGenerator() {
         datepicker_Fall2013_Spring2014.style.visibility = 'visible';
         datepicker_Spring2014_Summer2014.style.visibility = 'hidden';
         datepicker_Fall2013_Int2_Summer2014_Int2.style.visibility = 'hidden';
+        datepicker_Fall2013_Spring2014.style.visibility = 'hidden';
 
         displayCalendar_Fall2013_Spring2014(1);
     }
@@ -50,8 +53,19 @@ function calGenerator() {
         datepicker_Fall2013_Spring2014.style.visibility = 'hidden';
         datepicker_Spring2014_Summer2014.style.visibility = 'hidden';
         datepicker_Fall2013_Int2_Summer2014_Int2.style.visibility = 'visible';
+        datepicker_Fall2013_Spring2014.style.visibility = 'hidden';
 
         displayCalendar_Fall2013_Int2_Summer2014_Int2(1);
+    }
+
+    else if ((fromSemester == "fall_2013") && (toSemester == "fall_2014")) {
+        datepicker_table.style.visibility = 'visible';
+        datepicker_Fall2013_Spring2014.style.visibility = 'hidden';
+        datepicker_Spring2014_Summer2014.style.visibility = 'hidden';
+        datepicker_Fall2013_Int2_Summer2014_Int2.style.visibility = 'hidden';
+        datepicker_Fall2013_Spring2014.style.visibility = 'visible';
+
+        displayCalendar_Fall2013_Fall2014(1);
     }
 
 
@@ -63,6 +77,7 @@ function calGenerator() {
         datepicker_Spring2014_Summer2014.style.visibility = 'hidden';
         datepicker_Fall2013_Spring2014.style.visibility = 'hidden';
         datepicker_Fall2013_Int2_Summer2014_Int2.style.visibility = 'hidden';
+        datepicker_Fall2013_Spring2014.style.visibility = 'hidden';
 
 
 
