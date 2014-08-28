@@ -34,7 +34,7 @@ td {
         margin-left: 1em;
     }
 
-    #datepicker_Spring2014_Summer2014, #datepicker_Fall2013_Spring2014, #datepicker_Fall2013_Int2_Summer2014_Int2 {
+    .ll-skin-latoja {
         position:fixed;
         top:200px;
     }
@@ -55,7 +55,7 @@ td {
        /* background-color: #4bcc61; /* pink -50px +5em [iPad size in and outside of Inst. Canvas 768px]*/
     }
 
-    #datepicker_Spring2014_Summer2014, #datepicker_Fall2013_Spring2014, #datepicker_Fall2013_Int2_Summer2014_Int2 {
+    .ll-skin-latoja {
         position:fixed;
         top:290px;
     }
