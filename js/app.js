@@ -34,9 +34,13 @@ var from_semester_title = document.querySelector('#from_semester');
 /* 3 - Spring 2014 to Summer 2014 conversion */
 function displayCalendar_Spring2014_Summer2014(numberOfMonths) {
 
-
-    to_semester_title.innerHTML = "Summer 2014";
     from_semester_title.innerHTML = "Spring 2014";
+    to_semester_title.innerHTML = "Summer 2014";
+
+    $("#weekNumber").html("1");
+
+    $("#dateoutput1").html("13 Jan, Mon");
+    $("#dateoutput2").html("5 May, Mon");
 
 
     function highlightDays(date) {
@@ -218,9 +222,13 @@ function displayCalendar_Spring2014_Summer2014(numberOfMonths) {
 /* 1 -  Fall 2013 to Spring 2014 conversion */
 function displayCalendar_Fall2013_Spring2014(numberOfMonths) {
 
-
-    to_semester_title.innerHTML = "Spring 2014";
     from_semester_title.innerHTML = "Fall 2013";
+    to_semester_title.innerHTML = "Spring 2014";
+
+    $("#weekNumber").html("1");
+
+    $("#dateoutput1").html("9 Sep, Mon");
+    $("#dateoutput2").html("13 Jan, Mon");
 
     function highlightDays(date) {
         var a = new Date(2013, 8, 9); // September 9, 2013
@@ -397,9 +405,13 @@ function displayCalendar_Fall2013_Spring2014(numberOfMonths) {
 /* 2 - Fall 2013 to Summer 2014 conversion */
 function displayCalendar_Fall2013_Int2_Summer2014_Int2(numberOfMonths) {
 
-
-    to_semester_title.innerHTML = "Summer 2014 Int 2";
     from_semester_title.innerHTML = "Fall 2013 Int 2";
+    to_semester_title.innerHTML = "Summer 2014 Int 2";
+
+    $("#weekNumber").html("1");
+
+    $("#dateoutput1").html("28 Oct, Mon");
+    $("#dateoutput2").html("23 Jun, Mon");
 
     function highlightDays(date) {
         var a = new Date(2013, 9, 28); // 2013, October (10-1) 28
@@ -528,9 +540,14 @@ function displayCalendar_Fall2013_Int2_Summer2014_Int2(numberOfMonths) {
 /* 4 -  Fall 2013 to Fall 2014 conversion */
 function displayCalendar_Fall2013_Fall2014(numberOfMonths) {
 
-
-    to_semester_title.innerHTML = "Fall 2014";
     from_semester_title.innerHTML = "Fall 2013";
+    to_semester_title.innerHTML = "Fall 2014";
+
+    $("#weekNumber").html("1");
+
+    $("#dateoutput1").html("9 Sep, Mon");
+    $("#dateoutput2").html("2 Sep, Tue");
+
 
     function highlightDays(date) {
         var a = new Date(2013, 8, 9); // September 9, 2013
@@ -703,9 +720,13 @@ function displayCalendar_Fall2013_Fall2014(numberOfMonths) {
 /* 5 -  Summer 2014 to Fall 2014 conversion */
 function displayCalendar_Summer2014_Fall2014(numberOfMonths) {
 
-
-    to_semester_title.innerHTML = "Fall 2014";
     from_semester_title.innerHTML = "Summer 2014";
+    to_semester_title.innerHTML = "Fall 2014";
+
+    $("#weekNumber").html("1");
+
+    $("#dateoutput1").html("5 May, Mon");
+    $("#dateoutput2").html("2 Sep, Tue");
 
     function highlightDays(date) {
         var a = new Date(2014, 4, 5); // May 5, 2014
@@ -877,9 +898,13 @@ function displayCalendar_Summer2014_Fall2014(numberOfMonths) {
 /* 6 -  Fall 2014 to Spring 2015 conversion */
 function displayCalendar_Fall2014_Spring2015(numberOfMonths) {
 
-
-    to_semester_title.innerHTML = "Spring 2015";
     from_semester_title.innerHTML = "Fall 2014";
+    to_semester_title.innerHTML = "Spring 2015";
+
+    $("#weekNumber").html("1");
+
+    $("#dateoutput1").html("2 Sep, Tue");
+    $("#dateoutput2").html("6 Jan, Tue");
 
     function highlightDays(date) {
         var a = new Date(2014, 8, 2); // September 2, 2014
@@ -1063,9 +1088,14 @@ function displayCalendar_Fall2014_Spring2015(numberOfMonths) {
 /* 6 -  Fall 2014 to Spring 2015 conversion */
 function displayCalendar_Fall2014_Spring2015_5(numberOfMonths) {
 
-
-    to_semester_title.innerHTML = "Spring 2015";
     from_semester_title.innerHTML = "Fall 2014";
+    to_semester_title.innerHTML = "Spring 2015";
+
+
+    $("#weekNumber").html("1");
+
+    $("#dateoutput1").html("2 Sep, Tue");
+    $("#dateoutput2").html("5 Jan, Mon");
 
     function highlightDays(date) {
         var a = new Date(2014, 8, 2); // September 2, 2014
@@ -1078,6 +1108,7 @@ function displayCalendar_Fall2014_Spring2015_5(numberOfMonths) {
         return [true, ''];
 
     }
+
 
 
     $("#datepicker_Fall2014_Spring2015_5").datepicker({

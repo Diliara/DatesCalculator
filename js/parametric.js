@@ -23,7 +23,6 @@ function calGenerator() {
     var datepicker_table = document.querySelector('#datepicker_table');
 
 
-
     /*
      console.log("fromSemester: " + fromSemester);
      console.log("toSemester: " + toSemester);
@@ -37,7 +36,8 @@ function calGenerator() {
         datepicker_Fall2013_Spring2014.style.visibility = 'hidden';
         datepicker_Summer2014_Fall2014.style.visibility = 'hidden';
         datepicker_Spring2014_Summer2014.style.visibility = 'visible';
-
+        datepicker_Fall2014_Spring2015.style.visibility = 'hidden';
+        datepicker_Fall2014_Spring2015_5.style.visibility = 'hidden';
 
 
         displayCalendar_Spring2014_Summer2014(1);
@@ -53,7 +53,8 @@ function calGenerator() {
         datepicker_Summer2014_Fall2014.style.visibility = 'hidden';
         datepicker_Fall2013_Spring2014.style.visibility = 'visible';
 
-
+        datepicker_Fall2014_Spring2015.style.visibility = 'hidden';
+        datepicker_Fall2014_Spring2015_5.style.visibility = 'hidden';
 
         displayCalendar_Fall2013_Spring2014(1);
     }
@@ -65,7 +66,8 @@ function calGenerator() {
         datepicker_Fall2013_Spring2014.style.visibility = 'hidden';
         datepicker_Summer2014_Fall2014.style.visibility = 'hidden';
         datepicker_Fall2013_Int2_Summer2014_Int2.style.visibility = 'visible';
-
+        datepicker_Fall2014_Spring2015.style.visibility = 'hidden';
+        datepicker_Fall2014_Spring2015_5.style.visibility = 'hidden';
 
 
         displayCalendar_Fall2013_Int2_Summer2014_Int2(1);
@@ -80,7 +82,8 @@ function calGenerator() {
         datepicker_Summer2014_Fall2014.style.visibility = 'hidden';
 
         datepicker_Fall2013_Fall2014.style.visibility = 'visible';
-
+        datepicker_Fall2014_Spring2015.style.visibility = 'hidden';
+        datepicker_Fall2014_Spring2015_5.style.visibility = 'hidden';
 
 
         displayCalendar_Fall2013_Fall2014(1);
@@ -94,6 +97,8 @@ function calGenerator() {
         datepicker_Fall2013_Fall2014.style.visibility = 'hidden';
         datepicker_Summer2014_Fall2014.style.visibility = 'visible';
 
+        datepicker_Fall2014_Spring2015.style.visibility = 'hidden';
+        datepicker_Fall2014_Spring2015_5.style.visibility = 'hidden';
 
         displayCalendar_Summer2014_Fall2014(1);
     }
@@ -106,7 +111,7 @@ function calGenerator() {
         datepicker_Summer2014_Fall2014.style.visibility = 'hidden';
         datepicker_Fall2013_Spring2014.style.visibility = 'hidden';
         datepicker_Fall2014_Spring2015.style.visibility = 'visible';
-
+        datepicker_Fall2014_Spring2015_5.style.visibility = 'hidden';
 
 
         displayCalendar_Fall2014_Spring2015(1);
@@ -123,13 +128,12 @@ function calGenerator() {
         datepicker_Fall2014_Spring2015_5.style.visibility = 'visible';
 
 
-
         displayCalendar_Fall2014_Spring2015_5(1);
     }
 
 
     else {
-      /*  calendar.style.visibility = 'hidden'; */
+        /*  calendar.style.visibility = 'hidden'; */
         alert("No calendar available for the setup migration dates");
         datepicker_table.style.visibility = 'hidden';
         datepicker_Spring2014_Summer2014.style.visibility = 'hidden';
@@ -137,12 +141,9 @@ function calGenerator() {
         datepicker_Fall2013_Int2_Summer2014_Int2.style.visibility = 'hidden';
         datepicker_Fall2013_Spring2014.style.visibility = 'hidden';
         datepicker_Summer2014_Fall2014.style.visibility = 'hidden';
-        datepicker_Summer2014_Fall2014_5.style.visibility = 'hidden';
 
-
-
-
-
+        datepicker_Fall2014_Spring2015.style.visibility = 'hidden';
+        datepicker_Fall2014_Spring2015_5.style.visibility = 'hidden';
 
 
     }

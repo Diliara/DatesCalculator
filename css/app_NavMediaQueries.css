@@ -30,13 +30,13 @@ td {
     }
     #datepicker_table {
         position:fixed;
-        top:200px;
+        top:240px;
         margin-left: 1em;
     }
 
     .ll-skin-latoja {
         position:fixed;
-        top:200px;
+        top:240px;
     }
 
     #toSelect {
@@ -57,12 +57,12 @@ td {
 
     .ll-skin-latoja {
         position:fixed;
-        top:290px;
+        top:330px;
     }
 
     #datepicker_table {
         position:fixed;
-        top:550px;
+        top:590px;
     }
 
 
