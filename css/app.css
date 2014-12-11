@@ -4,6 +4,10 @@
 }
 */
 
+body {
+    padding: 25px 20px;
+}
+
 
 #datepicker_table {
     visibility: hidden;
