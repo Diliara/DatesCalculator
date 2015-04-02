@@ -1,30 +1,4 @@
-/*
- * jQuery UI Datepicker: Parse and Format Dates
- * http://salman-w.blogspot.com/2013/01/jquery-ui-datepicker-examples.html
- */
 
-/* media query event handler
- if (matchMedia) {
- var mq = window.matchMedia("(max-width: 800px)");
- mq.addListener(WidthChange);
- WidthChange(mq);
- }
-
- // media query change
- function WidthChange(mq) {
-
- if (mq.matches) {
- //  console.log("here");
- displayCalendar(1);
- }
- else {
- //   console.log("there");
- displayCalendar(4);
-
- }
-
- }
- */
 
 
 var to_semester_title = document.querySelector('#to_semester');
@@ -1277,7 +1251,7 @@ function displayCalendar_Fall2014_Summer2015(numberOfMonths) {
     $("#weekNumber").html("1");
 
     $("#dateoutput1").html("2 Sep, Tue");
-    $("#dateoutput2").html("27 Apr, Mon");
+    $("#dateoutput2").html("4 May, Mon");
 
     function highlightDays(date) {
         var a = new Date(2014, 8, 2); // September 2, 2014
@@ -1310,7 +1284,7 @@ function displayCalendar_Fall2014_Summer2015(numberOfMonths) {
         onSelect: function (dateText, inst) {
             var date = $.datepicker.parseDate(inst.settings.dateFormat || $.datepicker._defaults.dateFormat, dateText, inst.settings);
             var dateText1 = $.datepicker.formatDate("d M, D", date, inst.settings);
-            date.setDate(date.getDate() + 237);
+            date.setDate(date.getDate() + 244);
             var dateText2 = $.datepicker.formatDate("d M, D", date, inst.settings);
 
             var newDate = date.getDate();
@@ -1324,47 +1298,46 @@ function displayCalendar_Fall2014_Summer2015(numberOfMonths) {
 
             var weekNumber;
             var weekDays = 4;
-            var wk1_start = 27;
-            var wk1_end = 1;
 
+            var wk1_start = 4;
+            var wk1_end = wk1_start + weekDays;
 
-            var wk2_start = 4;
+            var wk2_start = 11;
             var wk2_end = wk2_start + weekDays;
 
-            var wk3_start = 11;
+            var wk3_start = 18;
             var wk3_end = wk3_start + weekDays;
 
-            var wk4_start = 18;
+            var wk4_start = 25;
             var wk4_end = wk4_start + weekDays;
 
-            var wk5_start = 25;
+            var wk5_start = 1;
             var wk5_end = wk5_start + weekDays;
 
-            var wk6_start = 1;
+            var wk6_start = 8;
             var wk6_end = wk6_start + weekDays;
 
-            var wk7_start = 8;
+            var wk7_start = 15;
             var wk7_end = wk7_start + weekDays;
 
-            var wk8_start = 15;
+            var wk8_start = 22;
             var wk8_end = wk8_start + weekDays;
 
-            var wk9_start = 22;
-            var wk9_end = wk9_start + weekDays;
+            var wk9_start = 29;
+            var wk9_end = 3;
 
-            var wk10_start = 29;
-            var wk10_end = 3;
+            var wk10_start = 6;
+            var wk10_end = wk10_start + weekDays;
 
-            var wk11_start = 6;
-            var wk11_end = wk11_start + weekDays;
+            var wk11_start = 13;
+            var wk11_end = 3;
 
-            var wk12_start = 13;
-            var wk12_end = 3;
+            var wk12_start = 20;
+            var wk12_end = wk12_start + weekDays;
 
-            var wk13_start = 20;
+            var wk13_start = 27;
             var wk13_end = wk13_start + weekDays;
 
-            var April = 3;
             var May = 4;
             var June = 5;
             var July = 6;
@@ -1374,12 +1347,7 @@ function displayCalendar_Fall2014_Summer2015(numberOfMonths) {
              console.log("newMonth: " + newMonth);
              */
 
-
-            if ((newDate >= wk1_start && newMonth == April)) {
-                weekNumber = 1;
-            }
-
-            else if ((newDate <= wk1_end && newMonth == May)) {
+            if ((newDate >= wk1_start && newDate <= wk1_end) && (newMonth == May)) {
                 weekNumber = 1;
             }
 
@@ -1395,7 +1363,7 @@ function displayCalendar_Fall2014_Summer2015(numberOfMonths) {
                 weekNumber = 4;
             }
 
-            else if ((newDate >= wk5_start && newDate <= wk5_end) && (newMonth == May)) {
+            else if ((newDate >= wk5_start && newDate <= wk5_end) && (newMonth == June)) {
                 weekNumber = 5;
             }
 
@@ -1403,38 +1371,38 @@ function displayCalendar_Fall2014_Summer2015(numberOfMonths) {
                 weekNumber = 6;
             }
 
+
             else if ((newDate >= wk7_start && newDate <= wk7_end) && (newMonth == June)) {
                 weekNumber = 7;
             }
-
 
             else if ((newDate >= wk8_start && newDate <= wk8_end) && (newMonth == June)) {
                 weekNumber = 8;
             }
 
-            else if ((newDate >= wk9_start && newDate <= wk9_end) && (newMonth == June)) {
+            else if (newDate >= wk9_start && newMonth == June) {
+                weekNumber = 9;
+            }
+            else if (newDate <= wk9_end && newMonth == July) {
                 weekNumber = 9;
             }
 
-            else if (newDate >= wk10_start && newMonth == June) {
-                weekNumber = 10;
-            }
-            else if (newDate <= wk10_end && newMonth == July) {
+            else if ((newDate >= wk10_start && newDate <= wk10_end) && (newMonth == July)) {
                 weekNumber = 10;
             }
 
-            else if ((newDate >= wk11_start && newDate <= wk11_end) && (newMonth == July)) {
+            else if (newDate >= wk11_start && newMonth == July) {
                 weekNumber = 11;
             }
 
-            else if (newDate >= wk12_start && newMonth == July) {
-                weekNumber = 12;
+            else if (newDate <= wk11_end && newMonth == July) {
+                weekNumber = 11;
             }
 
-            else if (newDate <= wk12_end && newMonth == July) {
+
+            else if ((newDate >= wk12_start && newDate <= wk12_end) && (newMonth == July)) {
                 weekNumber = 12;
             }
-
 
             else if ((newDate >= wk13_start && newDate <= wk13_end) && (newMonth == July)) {
                 weekNumber = 13;
@@ -1511,9 +1479,9 @@ function displayCalendar_Fall2014_Summer2015_Int2(numberOfMonths) {
             var newMonth = date.getMonth();
 
 
-             console.log("date: " + date);
-             console.log("newDate: " + newDate);
-             console.log("newMonth: " + newMonth);
+            console.log("date: " + date);
+            console.log("newDate: " + newDate);
+            console.log("newMonth: " + newMonth);
 
 
             var weekNumber;
@@ -1615,7 +1583,6 @@ function displayCalendar_Fall2014_Summer2015_Int2(numberOfMonths) {
             }
 
 
-
             else if (newDate >= wk11_start && newMonth == August) {
                 weekNumber = 11;
             }
@@ -1629,6 +1596,194 @@ function displayCalendar_Fall2014_Summer2015_Int2(numberOfMonths) {
             }
 
             else if ((newDate >= wk13_start && newDate <= wk13_end) && (newMonth == September)) {
+                weekNumber = 13;
+            }
+
+
+            else {
+                weekNumber = 'N/A';
+            }
+
+
+            $("#weekNumber").html(weekNumber);
+
+            $("#dateoutput1").html(dateText1);
+            $("#dateoutput2").html(dateText2);
+
+
+        }
+
+
+
+    });
+
+
+}
+
+
+function displayCalendar_Spring2015_Summer2015(numberOfMonths) {
+
+    from_semester_title.innerHTML = "Spring 2015";
+    to_semester_title.innerHTML = "Summer 2015";
+
+
+    $("#weekNumber").html("1");
+
+    $("#dateoutput1").html("6 Jan, Tue");
+    $("#dateoutput2").html("4 May, Mon");
+
+    function highlightDays(date) {
+        var a = new Date(2015, 0, 6); // Jan 6, 2015
+        var b = new Date(2015, 3, 20); // April 20, 2015
+
+        if (a <= date && date <= b) {
+            return [true, 'highlight'];
+        }
+
+        return [true, ''];
+
+    }
+
+
+    $("#datepicker_Spring2015_Summer2015").datepicker({
+        /*
+         dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+         */
+
+        inline: true,
+        showOtherMonths: true,
+        defaultDate: '06-01-15',
+        numberOfMonths: numberOfMonths,
+        dateFormat: "dd-mm-yy",
+
+
+        beforeShowDay: highlightDays,
+
+
+        onSelect: function (dateText, inst) {
+            var date = $.datepicker.parseDate(inst.settings.dateFormat || $.datepicker._defaults.dateFormat, dateText, inst.settings);
+            var dateText1 = $.datepicker.formatDate("d M, D", date, inst.settings);
+            date.setDate(date.getDate() + 118);
+            var dateText2 = $.datepicker.formatDate("d M, D", date, inst.settings);
+
+            var newDate = date.getDate();
+            var newMonth = date.getMonth();
+
+            /*
+             console.log("date: " + date);
+             console.log("newDate: " + newDate);
+             console.log("newMonth: " + newMonth);
+             */
+
+            var weekNumber;
+            var weekDays = 4;
+
+            var wk1_start = 4;
+            var wk1_end = wk1_start + weekDays;
+
+            var wk2_start = 11;
+            var wk2_end = wk2_start + weekDays;
+
+            var wk3_start = 18;
+            var wk3_end = wk3_start + weekDays;
+
+            var wk4_start = 25;
+            var wk4_end = wk4_start + weekDays;
+
+            var wk5_start = 1;
+            var wk5_end = wk5_start + weekDays;
+
+            var wk6_start = 8;
+            var wk6_end = wk6_start + weekDays;
+
+            var wk7_start = 15;
+            var wk7_end = wk7_start + weekDays;
+
+            var wk8_start = 22;
+            var wk8_end = wk8_start + weekDays;
+
+            var wk9_start = 29;
+            var wk9_end = 3;
+
+            var wk10_start = 6;
+            var wk10_end = wk10_start + weekDays;
+
+            var wk11_start = 13;
+            var wk11_end = 3;
+
+            var wk12_start = 20;
+            var wk12_end = wk12_start + weekDays;
+
+            var wk13_start = 27;
+            var wk13_end = wk13_start + weekDays;
+
+            var May = 4;
+            var June = 5;
+            var July = 6;
+
+            /*
+             console.log("newDate: " + newDate);
+             console.log("newMonth: " + newMonth);
+             */
+
+            if ((newDate >= wk1_start && newDate <= wk1_end) && (newMonth == May)) {
+                weekNumber = 1;
+            }
+
+            else if ((newDate >= wk2_start && newDate <= wk2_end) && (newMonth == May)) {
+                weekNumber = 2;
+            }
+
+            else if ((newDate >= wk3_start && newDate <= wk3_end) && (newMonth == May)) {
+                weekNumber = 3;
+            }
+
+            else if ((newDate >= wk4_start && newDate <= wk4_end) && (newMonth == May)) {
+                weekNumber = 4;
+            }
+
+            else if ((newDate >= wk5_start && newDate <= wk5_end) && (newMonth == June)) {
+                weekNumber = 5;
+            }
+
+            else if ((newDate >= wk6_start && newDate <= wk6_end) && (newMonth == June)) {
+                weekNumber = 6;
+            }
+
+
+            else if ((newDate >= wk7_start && newDate <= wk7_end) && (newMonth == June)) {
+                weekNumber = 7;
+            }
+
+            else if ((newDate >= wk8_start && newDate <= wk8_end) && (newMonth == June)) {
+                weekNumber = 8;
+            }
+
+            else if (newDate >= wk9_start && newMonth == June) {
+                weekNumber = 9;
+            }
+            else if (newDate <= wk9_end && newMonth == July) {
+                weekNumber = 9;
+            }
+
+            else if ((newDate >= wk10_start && newDate <= wk10_end) && (newMonth == July)) {
+                weekNumber = 10;
+            }
+
+            else if (newDate >= wk11_start && newMonth == July) {
+                weekNumber = 11;
+            }
+
+            else if (newDate <= wk11_end && newMonth == July) {
+                weekNumber = 11;
+            }
+
+
+            else if ((newDate >= wk12_start && newDate <= wk12_end) && (newMonth == July)) {
+                weekNumber = 12;
+            }
+
+            else if ((newDate >= wk13_start && newDate <= wk13_end) && (newMonth == July)) {
                 weekNumber = 13;
             }
 
