@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]-->
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDBA Date Picker</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/app_NavMediaQueries.css">
+
+    <link href="css/jquery-ui-1.10.1.css" rel="stylesheet">
+
+    <!-- datepicker skin is from: https://github.com/rtsinani/jquery-datepicker-skins -->
+    <link rel="stylesheet" href="css/latoja.datepicker.css">
+
+    <link rel="stylesheet" href="css/app.css">
+
+    <script src="js/vendor/custom.modernizr.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+
+
+</head>
+<body>
+
+<div class="row">
+    <div class="large-12 columns">
+        <h1>GDBA Migration Date Picker</h1>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="large-5 medium-5 columns">
+        <div id="fromSelect">
+            <h2 class="subheader">Migrating from:</h2>
+            <select name="fromSemester" id="fromSemester"> <!--  onchange="doSomething(this.value);" -->
+                <option value="fall_2013">Fall 2013 - 9 Sep</option>
+                <option value="fall_2013_int2">Fall 2013 Int 2 - 28 Oct</option>
+                <option value="spring_2014">Spring 2014 - 13 Jan</option>
+                <option value="summer_2014">Summer 2014 - 5 May</option>
+                <option value="fall_2014">Fall 2014 - 2 Sep</option>
+                <option value="spring_2015">Spring 2015 - 6 Jan</option>
+
+
+            </select>
+        </div>
+    </div>
+
+    <div class="large-5 medium-5 columns">
+
+        <div id="toSelect">
+            <h2 class="subheader">Migrating to:</h2>
+
+            <select name="toSemester" id="toSemester">
+                <option value="fall_2013">Fall 2013 - 9 Sep</option>
+                <option value="spring_2014">Spring 2014 - 13 Jan</option>
+                <option value="summer_2014">Summer 2014 - 5 May</option>
+                <option value="summer_2014_int2">Summer 2014 Int 2 - June 23</option>
+                <option value="fall_2014">Fall 2014 - 2 Sep</option>
+                <option value="spring_2015_5">Spring 2015 - 5 Jan</option>
+                <option value="spring_2015">Spring 2015 - 6 Jan</option>
+                <option value="summer_2015">Summer 2015 - 4 May</option>
+                <option value="summer_2015_int2">Summer 2015 - 22 June</option>
+
+
+            </select>
+
+        </div>
+
+
+    </div>
+
+    <div class="large-2 medium-2 columns"></div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns">
+        <button class="radius small" id="calGenerator">Generate</button>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="large-5 medium-5 columns">
+        <div class="verticalSpace"></div>
+
+        <div id="datepicker_Spring2014_Summer2014" class="ll-skin-latoja"></div>
+        <div id="datepicker_Fall2013_Spring2014" class="ll-skin-latoja"></div>
+        <div id="datepicker_Fall2013_Int2_Summer2014_Int2" class="ll-skin-latoja"></div>
+        <div id="datepicker_Fall2013_Fall2014" class="ll-skin-latoja"></div>
+        <div id="datepicker_Summer2014_Fall2014" class="ll-skin-latoja"></div>
+        <div id="datepicker_Fall2014_Spring2015" class="ll-skin-latoja"></div>
+        <div id="datepicker_Fall2014_Spring2015_5" class="ll-skin-latoja"></div>
+        <div id="datepicker_Fall2014_Summer2015" class="ll-skin-latoja"></div>
+        <div id="datepicker_Fall2014_Summer2015_Int2" class="ll-skin-latoja"></div>
+
+        <div id="datepicker_Spring2015_Summer2015" class="ll-skin-latoja"></div>
+
+
+        <div class="verticalSpace"></div>
+
+    </div>
+
+    <div class="large-7 medium-7 columns">
+        <table id="datepicker_table">
+            <thead>
+            <tr>
+                <th class="table-column-20">Wk #</th>
+                <th class="table-column-40" id="from_semester"></th>
+                <th id="to_semester"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><span id="weekNumber">&dash;</span></td>
+
+                <!-- Spring 2014 - 13 Jan, Mon 2014 -->
+                <td><span id="dateoutput1">&dash;</span></td>
+
+                <!-- Summer 2014 - 5 May, Mon  2014 -->
+                <td><span id="dateoutput2">&dash;</span></td>
+
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<!--
+<div class="row">
+    <div class="large-12 columns">
+      <p id="notice" class="panel">No calendar available</p>
+    </div>
+</div>
+-->
+
+<script src="js/app.js"></script>
+<script src="js/parametric.js"></script>
+<script src="js/foundation.min.js"></script>
+
+
+<script>
+    $(document).foundation();
+</script>
+</body>
+</html>
+

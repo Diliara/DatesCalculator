@@ -1,13 +1,6 @@
 DatesCalculator
 ===============
 
-Simple datepicker used for dates calculation. Consists of a calendar and text that is populated according to a selected date. Follows pre-setup logics in :
+Simple dates migration calculator for school semesters.
 
-index.html
-js/app.js
-js/parametric.js
-
-ToDo: Refactor
-
-
-
+[diliara.github.io/DatesCalculator](http://diliara.github.io/DatesCalculator)

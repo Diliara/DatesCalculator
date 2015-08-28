@@ -1,11 +1,11 @@
-Date.prototype.dayOfYear= function(){
-    var j1= new Date(this);
+Date.prototype.dayOfYear = function() {
+    var j1 = new Date(this);
     j1.setMonth(0, 0);
-    return Math.round((this-j1)/8.64e7);
+    return Math.round((this - j1) / 8.64e7);
 }
 
 
-var app = function (){
+var app = function() {
     var dStartSemesterFirstDay;
     var dDestinationSemesterFirstDay;
 
@@ -30,8 +30,8 @@ var app = function (){
         var weekX = Math.floor((destinationDate.dayOfYear() - dDestinationSemesterFirstDay.dayOfYear()) / 7) + 1;
 
         return {
-            week : weekX,
-            date : destinationDate.toUTCString()
+            week: weekX,
+            date: destinationDate.toUTCString()
         };
     }
 
@@ -48,11 +48,11 @@ var app = function (){
     }
 
     return {
-        setStartSemesterFirstDate : setStartSemesterFirstDay,
+        setStartSemesterFirstDate: setStartSemesterFirstDay,
         setDestinationSemesterFirstDay: setDestinationSemesterFirstDay,
         getDateInDestinationSemester: getDateInDestinationSemester,
-        dStartSemesterFirstDay : getStartSemesterFirstDay,
-        dDestinationSemesterFirstDay : getDestinationSemesterfirstDay,
-        getStructuredDestinationInfo : getStructuredDestinationInfo
+        dStartSemesterFirstDay: getStartSemesterFirstDay,
+        dDestinationSemesterFirstDay: getDestinationSemesterfirstDay,
+        getStructuredDestinationInfo: getStructuredDestinationInfo
     };
 }();
