@@ -3,25 +3,29 @@
     <div ng-controller="datesCalcController">
         <h2>Migration Date Picker</h2>
 
+
         <hr>
-        <label>
-            From:
 
-            <select ng-model="chosenFromSemesterStartDay">
-                <option ng-repeat="fromSemester in semesters.fromSemesters" ng-value="fromSemester.startDate">{{ fromSemester.name }}</option>
+        <h3>Available Conversions:</h3>
+
+        <ul class="list">
+            <li ng-repeat="conversion in conversions">
+                <label><input ng-model="conversion.name" class="conversionName"></label>
+                <button ng-click="conversion.splice($index, 1)" aria-label="Remove">X</button>
+            </li>
+            <!--  <li>
+                <button ng-click="conversion.push({})">add</button>
+            </li>-->
+        </ul>
+        <hr/>
+
+
+        <label>Select a conversion:
+            <select ng-model="chosenConversion" ng-options="conversion.name for conversion in conversions">
+                <option value="">-- choose conversion --</option>
             </select>
-
-
         </label>
 
-        <br><br>
-
-        <label>
-            To:
-            <select ng-model="chosenToSemesterStartDay">
-                <option ng-repeat="toSemester in semesters.toSemesters" ng-value="toSemester.startDate">{{ toSemester.name }}</option>
-            </select>
-        </label>
 
         <br><br>
 
@@ -31,20 +35,12 @@
 
         </label>
 
-        <hr>
-        <h3>Debugging</h3>
-
-        <p>Chosen From Semester Start Date: {{ chosenFromSemesterStartDay }}</p>
-
-        <p>Chosen To Semester Start Date: {{ chosenToSemesterStartDay }}</p>
-
-        <p>Chosen Date: {{chosenDateInFromSemester}}</p>
 
         <hr>
 
         <h3>Calculate</h3>
 
-        <button ng-click="getDateInDestinationSemester(chosenFromSemesterStartDay, chosenToSemesterStartDay, chosenDateInFromSemester)">Calculate</button>
+        <button ng-click="getDateInDestinationSemester(chosenConversion.fromSemesterStartDate, chosenConversion.toSemesterStartDate, chosenDateInFromSemester)">Calculate</button>
 
         <p>Get date in new semester: {{presentedData }}</p>
     </div>

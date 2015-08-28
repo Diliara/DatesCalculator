@@ -8,72 +8,24 @@ angular.module('datesCalcApp')
     .controller('datesCalcController', ['$scope', function ($scope) {
 
 
-        $scope.semesters = {
+        $scope.conversions = [
+            {
+                name: "2015 Spring to 2015 Summer",
+                fromSemester: "2015 Spring - Jan 06",
+                fromSemesterStartDate: "2015-01-06",
+                toSemester: "2015 Summer - May 04",
+                toSemesterStartDate: "2015-05-04"
+            },
+            {
+                name: "2015 Summer to 2015 Fall",
+                fromSemester: "2015 Summer - May 04",
+                fromSemesterStartDate: "2015-05-04",
+                toSemester: "2015 Summer - Sept 08",
+                toSemesterStartDate: "2015-09-08"
+            }
 
-            fromSemesters: [
 
-                {
-                    name: "2013 Fall - Sept 09",
-                    startDate: new Date('2013-09-09')
-                },
-                {
-                    name: "2013 Fall Int 2 - Oct 28",
-                    startDate: new Date('2013-10-28')
-                },
-                {
-                    name: "2014 Spring - Jan 13",
-                    startDate: new Date('2014-01-13')
-                },
-                {
-                    name: "2014 Summer - May 05",
-                    startDate: new Date('2014-05-05')
-                },
-                {
-                    name: "2014 Fall - Sept 02",
-                    startDate: new Date('2014-09-02')
-                },
-                {
-                    name: "2015 Spring - Jan 06",
-                    startDate: new Date('2015-01-06')
-                },
-                {
-                    name: "2015 Summer - May 04",
-                    startDate: new Date('2015-05-04')
-                    /* startDateFormatted: new Date('2015-05-04').toUTCString().slice(0, 17) */
-                }
-            ],
-            toSemesters: [
-                {
-                    name: "2013 Fall - Sept 09",
-                    startDate: new Date('2013-09-09')
-                },
-                {
-                    name: "2013 Fall Int 2 - Oct 28",
-                    startDate: new Date('2013-10-28')
-                },
-                {
-                    name: "2014 Spring - Jan 13",
-                    startDate: new Date('2014-01-13')
-                },
-                {
-                    name: "2014 Summer - May 05",
-                    startDate: new Date('2014-05-05')
-                },
-                {
-                    name: "2014 Fall - Sept 02",
-                    startDate: new Date('2014-09-02')
-                },
-                {
-                    name: "2015 Spring - Jan 06",
-                    startDate: new Date('2015-01-06')
-                },
-                {
-                    name: "2015 Summer - May 04",
-                    startDate: new Date('2015-05-04')
-                }
-            ]
-
-        }
+        ]
 
 
         $scope.getDateInDestinationSemester = function (fromSemesterStartDate, toSemesterStartDate, dateInStartSemester) {
