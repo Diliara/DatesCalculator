@@ -11,7 +11,7 @@
         <ul class="list">
             <li ng-repeat="conversion in conversions">
                 <label><input ng-model="conversion.name" class="conversionName"></label>
-                <button ng-click="conversion.splice($index, 1)" aria-label="Remove">X</button>
+               <!-- <button ng-click="conversion.splice($index, 1)" aria-label="Remove">X</button>-->
             </li>
             <!--  <li>
                 <button ng-click="conversion.push({})">add</button>
@@ -30,7 +30,7 @@
         <br><br>
 
         <label>
-            Choose a date:
+            Select a date:
             <input type="date" ng-model="chosenDateInFromSemester"/>
 
         </label>

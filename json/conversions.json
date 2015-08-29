@@ -1,0 +1,13 @@
+[
+    {
+        "name": "2015 Spring (Jan 06) to 2015 Summer (May 04)",
+        "fromSemesterStartDate": "2015-01-06",
+        "toSemesterStartDate": "2015-05-04"
+    },
+    {
+        "name": "2015 Summer (May 04) to 2015 Fall (Sep 08)",
+        "fromSemesterStartDate": "2015-05-04",
+        "toSemesterStartDate": "2015-09-08"
+    }
+
+]
